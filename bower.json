@@ -12,6 +12,7 @@
     "angular-bootstrap": "~0.13.0",
     "jquery-ui": "1.10.3",
     "angular": "~1.4.0",
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "github-fork-ribbon-css": "~0.1.1"
   }
 }

@@ -3,7 +3,7 @@ app.controller('FileOpenController',  function($scope, $modalInstance, FileFacto
 	$scope.files    = [];
 	$scope.selected = {file:null};
 
-	// Retrieve the file definitions from the FileFactory and 
+	// Retrieve the file definitions from the FileFactory and
 	// provide them to the scope
 	//
 	FileFactory.getFileEntries(function(entries) {

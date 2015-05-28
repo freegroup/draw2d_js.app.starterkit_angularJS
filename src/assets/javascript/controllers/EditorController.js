@@ -24,7 +24,30 @@ app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal
 	    		    }
 	    	   );
     		},
-    		//------------------------------------------------------------------------
+
+            // ng-click Callbacks
+            //
+            // Open the FileOpenDialog and let the user select a new file for open
+            //
+            about: function(){
+                var modalInstance = $modal.open({
+                    templateUrl:'assets/templates/AboutController.html',
+                    controller: 'AboutController'
+                });
+
+                modalInstance.result.then(
+                    // [OK]
+                    function () {
+
+                    },
+                    // [Cancel]
+                    function () {
+
+                    }
+                );
+            },
+
+            //------------------------------------------------------------------------
     		
     		
     		// Configuration of the editor

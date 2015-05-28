@@ -42,8 +42,7 @@ module.exports = function (grunt) {
                     './src/assets/javascript/app.js',
                     './src/assets/javascript/factories/DemoData.js',
                     './src/assets/javascript/factories/FileFactory.js',
-                    './src/assets/javascript/controllers/EditorController.js',
-                    './src/assets/javascript/controllers/FileOpenController.js'
+                    './src/assets/javascript/controllers/*.js'
                 ],
                 dest: './dist/assets/javascript/app.js'
             },
@@ -62,6 +61,12 @@ module.exports = function (grunt) {
                 cwd: 'bower_components/jquery-ui/themes/eggplant',
                 src: ['**/*'],
                 dest: 'dist/lib/jquery-ui'
+            },
+            banner:{
+                expand: true,
+                cwd: 'bower_components/github-fork-ribbon-css/',
+                src: ['**/*.css'],
+                dest: 'dist/lib/banner'
             },
 
             application: {
@@ -84,7 +89,10 @@ module.exports = function (grunt) {
                     compress: false
                 },
                 files: {
-                    "./dist/assets/stylesheets/app.css": "./src/assets/less/styles.less"
+                    "./dist/assets/stylesheets/app.css": [
+                        "./src/assets/less/styles.less",
+                        "./src/assets/less/banner.less"
+                    ]
                 }
             }
         },
@@ -104,15 +112,25 @@ module.exports = function (grunt) {
                 files: [
                     './src/assets/javascript/**/*.js'
                 ],
-                tasks: ['concat:appliction'],
+                tasks: ['concat'],
+                options: {
+                    livereload: true
+                }
+            },
+            html: {
+                files: [
+                    './src/**/*.html'
+                ],
+                tasks: ['copy'],
                 options: {
                     livereload: true
                 }
             },
 
+
             less: {
                 files: [
-                    "./src/assets/stylesheets/**/*.less"
+                    "./src/assets/less/**/*.less"
                 ],
                 tasks: ['less'],
                 options: {

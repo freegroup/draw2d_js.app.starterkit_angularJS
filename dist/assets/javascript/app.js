@@ -165,7 +165,17 @@ var app = angular.module('draw2dApp', ["draw2d", 'ui.bootstrap']);
         }
     };
 }]);
-;/* jshint evil:true */
+;app.controller('AboutController',  function($scope, $modalInstance) {
+
+
+
+	// ng-click for "Ok"
+	//
+	$scope.ok = function() {
+		$modalInstance.close();
+	};
+
+} );;/* jshint evil:true */
 app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal) {
 	
 
@@ -191,7 +201,30 @@ app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal
 	    		    }
 	    	   );
     		},
-    		//------------------------------------------------------------------------
+
+            // ng-click Callbacks
+            //
+            // Open the FileOpenDialog and let the user select a new file for open
+            //
+            about: function(){
+                var modalInstance = $modal.open({
+                    templateUrl:'assets/templates/AboutController.html',
+                    controller: 'AboutController'
+                });
+
+                modalInstance.result.then(
+                    // [OK]
+                    function () {
+
+                    },
+                    // [Cancel]
+                    function () {
+
+                    }
+                );
+            },
+
+            //------------------------------------------------------------------------
     		
     		
     		// Configuration of the editor
@@ -224,7 +257,7 @@ app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal
 	$scope.files    = [];
 	$scope.selected = {file:null};
 
-	// Retrieve the file definitions from the FileFactory and 
+	// Retrieve the file definitions from the FileFactory and
 	// provide them to the scope
 	//
 	FileFactory.getFileEntries(function(entries) {
