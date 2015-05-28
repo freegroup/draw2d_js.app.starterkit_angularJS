@@ -1,5 +1,5 @@
 {
-  "name": "draw2d_js.app.starterkit_githubstorage",
+  "name": "draw2d_js.app.starterkit_angularJS",
   "version": "0.0.1",
   "description": "Draw2D HTML5 getting started with Github as storage provider",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/freegroup/draw2d_js.app.starterkit_githubstorage.git"
+    "url": "https://github.com/freegroup/draw2d_js.app.starterkit_angularJS.git"
   },
   "keywords": [
     "diagramming",
@@ -19,7 +19,7 @@
   "author": "Andreas Herz (FreeGroup)",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/freegroup/draw2d_js.app.starterkit_githubstorage/issues"
+    "url": "https://github.com/freegroup/draw2d_js.app.starterkit_angularJS/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -28,6 +28,7 @@
     "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-less": "~1.0.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-copy": "~0.8.0"
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-gh-pages": "^0.10.0"
   }
 }
