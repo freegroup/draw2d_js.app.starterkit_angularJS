@@ -5,22 +5,32 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+    <link rel="stylesheet" href="./lib/banner/gh-fork-ribbon.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="./lib/banner/gh-fork-ribbon.ie.css">
+    <![endif]-->
+
     <link type="text/css" rel="stylesheet" href="./assets/stylesheets/dependencies.css" />
     <link type="text/css" rel="stylesheet" href="./assets/stylesheets/app.css" />
 
 </head>
 
-
 <body id="container"  ng-controller="EditorController">
+<div class="github-fork-ribbon-wrapper right-bottom">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/freegroup/draw2d_js.app.starterkit_angularJS">Fork me on GitHub</a>
+    </div>
+</div>
 
    <div id="logo">Draw2D</div>
    <div id="toolbar" class="navbar-default">
       <button class="btn btn-lg btn-primary"                                             ng-click="editor.fileOpen()"  > Open   </button>
       <div class="btn-group">
-      <button class="btn btn-lg btn-default" ng-disabled="!editor.state.canUndo"         ng-click="editor.undo()"  > Undo   </button>
-      <button class="btn btn-lg btn-default" ng-disabled="!editor.state.canRedo"         ng-click="editor.redo()"  > Redo   </button>
-      <button class="btn btn-lg btn-default" ng-disabled="editor.selection.figure==null" ng-click="editor.delete()"> Delete </button>
+          <button class="btn btn-lg btn-default" ng-disabled="!editor.state.canUndo"         ng-click="editor.undo()"  > Undo   </button>
+          <button class="btn btn-lg btn-default" ng-disabled="!editor.state.canRedo"         ng-click="editor.redo()"  > Redo   </button>
+          <button class="btn btn-lg btn-default" ng-disabled="editor.selection.figure==null" ng-click="editor.delete()"> Delete </button>
       </div>
+      <button class="btn btn-lg btn-warning pull-right"   ng-click="editor.about()"  > About   </button>
    </div>
    
 
@@ -58,19 +68,17 @@
      </div>
      
    </div>
-   
+
    <div id="palettePane" draw2d-palette>
    </div>
          
    <div id="canvas" draw2d-canvas>
    </div>
 
-
 </body>
 
 
 <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
 <SCRIPT src="./assets/javascript/app.js"></SCRIPT>
-
 
 </html>
