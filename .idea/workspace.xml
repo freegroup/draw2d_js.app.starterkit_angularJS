@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6f0105b-1bb0-4b1a-97d4-3bdf86533f8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/templates/AboutController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/javascript/controllers/AboutController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/less/banner.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/javascript/controllers/EditorController.js" afterPath="$PROJECT_DIR$/src/assets/javascript/controllers/EditorController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/javascript/controllers/FileOpenController.js" afterPath="$PROJECT_DIR$/src/assets/javascript/controllers/FileOpenController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/stylesheets/app.css" afterPath="$PROJECT_DIR$/dist/assets/stylesheets/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/javascript/app.js" afterPath="$PROJECT_DIR$/dist/assets/javascript/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a6f0105b-1bb0-4b1a-97d4-3bdf86533f8e" name="Default" comment="" />
     <ignored path="draw2d_js.app.starterkit_githubstorage.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -718,12 +705,12 @@
       <option name="number" value="Default" />
       <updated>1432808982078</updated>
       <workItem from="1432808983514" duration="4626000" />
-      <workItem from="1432831747972" duration="2609000" />
+      <workItem from="1432831747972" duration="2864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7235000" />
+    <option name="totallyTimeSpent" value="7490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="23" width="1776" height="985" extended-state="0" />
