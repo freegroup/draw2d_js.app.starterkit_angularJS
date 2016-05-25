@@ -114,11 +114,25 @@ body {
   align: center;
   border-radius: 5px;
 }
+#version {
+  display: block;
+  padding: 45px 24px 10px 24px;
+  height: 64px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  font-size: 10px;
+  font-weight: 100;
+  text-align: right;
+}
 #logo {
   display: block;
   margin: auto;
   padding: 12px 24px 10px 24px;
   position: fixed;
+  text-align: right;
   left: 0;
   top: 0;
   height: 64px;

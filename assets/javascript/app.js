@@ -50,13 +50,19 @@ d2.directive("draw2dCanvas", ["$window","$parse", "$timeout", function($window,$
     	           // Update the selection in the model
     	           // and Databinding Draw2D -> Angular
     	           var changeCallback = function(emitter, attribute){
+					   console.log(attribute);
     	        	   $timeout(function(){
     	        		   if(scope.editor.selection.attr!==null){
     	        			   scope.editor.selection.attr[attribute]= emitter.attr(attribute);
     	        		   }
     	               },0);
     	           };
-    	           canvas.on("select", function(canvas,figure){
+    	           canvas.on("select", function(canvas,event){
+					   var figure = event.figure;
+					   if(figure instanceof draw2d.Connection){
+						   return; // silently
+					   }
+
     	               $timeout(function(){
     	            	   if(figure!==null){
     	            		   scope.editor.selection.className = figure.NAME;
@@ -135,7 +141,10 @@ d2.directive("draw2dPalette",  ["$window","$parse",'$timeout', function($window,
    };
 }]);
 
-;
+;// inject the version of the used Draw2D lib into the header of the app
+// (just to inform the developer which version is used))
+$("#version").html(draw2d.Configuration.version);
+
 var app = angular.module('draw2dApp', ["draw2d", 'ui.bootstrap']);
 ;var DemoData = [
                 {
@@ -242,7 +251,7 @@ app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal
                 }
             },
  
-            // provide all figurs to show in the left hand palette
+            // provide all figures to show in the left hand palette.
             // Used by the directrives/canvas.js
             palette: {
                     figures: [
