@@ -54,7 +54,8 @@ d2.directive("draw2dCanvas", ["$window","$parse", "$timeout", function($window,$
     	        		   }
     	               },0);
     	           };
-    	           canvas.on("select", function(canvas,figure){
+    	           canvas.on("select", function(canvas,event){
+					   var figure = event.figure;
     	               $timeout(function(){
     	            	   if(figure!==null){
     	            		   scope.editor.selection.className = figure.NAME;

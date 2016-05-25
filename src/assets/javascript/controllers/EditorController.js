@@ -65,7 +65,7 @@ app.controller('EditorController',[ '$scope', "$modal", function($scope,  $modal
                 }
             },
  
-            // provide all figurs to show in the left hand palette
+            // provide all figures to show in the left hand palette.
             // Used by the directrives/canvas.js
             palette: {
                     figures: [

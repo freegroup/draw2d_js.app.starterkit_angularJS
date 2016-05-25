@@ -1,14 +1,13 @@
 {
-  "name": "draw2d_js.app.starterkit_simple",
-  "version": "0.0.1",
-  "homepage": "https://github.com/freegroup/draw2d_js.app.starterkit_simple",
+  "name": "draw2d_js.app.starterkit_angularJS",
+  "version": "0.0.2",
+  "homepage": "https://github.com/freegroup/draw2d_js.app.starterkit_angularJS",
   "authors": [
     "Andreas Herz <FreeGroup>"
   ],
   "license": "MIT",
   "dependencies": {
-    "draw2d": "~5.5.2",
-    "octokat": "~0.4.9",
+    "draw2d": "~6.1.27",
     "angular-bootstrap": "~0.13.0",
     "jquery-ui": "1.10.3",
     "angular": "~1.4.0",
