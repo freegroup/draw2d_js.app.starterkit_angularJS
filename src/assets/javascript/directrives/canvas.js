@@ -48,6 +48,7 @@ d2.directive("draw2dCanvas", ["$window","$parse", "$timeout", function($window,$
     	           // Update the selection in the model
     	           // and Databinding Draw2D -> Angular
     	           var changeCallback = function(emitter, attribute){
+					   console.log(attribute);
     	        	   $timeout(function(){
     	        		   if(scope.editor.selection.attr!==null){
     	        			   scope.editor.selection.attr[attribute]= emitter.attr(attribute);
@@ -56,6 +57,10 @@ d2.directive("draw2dCanvas", ["$window","$parse", "$timeout", function($window,$
     	           };
     	           canvas.on("select", function(canvas,event){
 					   var figure = event.figure;
+					   if(figure instanceof draw2d.Connection){
+						   return; // silently
+					   }
+
     	               $timeout(function(){
     	            	   if(figure!==null){
     	            		   scope.editor.selection.className = figure.NAME;

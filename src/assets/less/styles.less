@@ -130,12 +130,28 @@ body {
  align:center;
  border-radius: 5px;
 }
+#version {
+    display: block;
+    padding: 45px 24px 10px 24px;
+    height: @toolbarHeight;
+    width: 160px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 160px;
+    font-size: 10px;
+    font-weight: 100;
+    text-align: right;
+}
+
 
 #logo {
     display: block;
     margin: auto;
     padding: 12px 24px 10px 24px;
     position: fixed;
+    text-align: right;
     left: 0;
     top: 0;
     height: @toolbarHeight;
@@ -144,7 +160,6 @@ body {
     font-weight: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     z-index: 1000;
-    
 }
 
 .panel{
