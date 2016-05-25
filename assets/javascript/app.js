@@ -50,7 +50,6 @@ d2.directive("draw2dCanvas", ["$window","$parse", "$timeout", function($window,$
     	           // Update the selection in the model
     	           // and Databinding Draw2D -> Angular
     	           var changeCallback = function(emitter, attribute){
-					   console.log(attribute);
     	        	   $timeout(function(){
     	        		   if(scope.editor.selection.attr!==null){
     	        			   scope.editor.selection.attr[attribute]= emitter.attr(attribute);
